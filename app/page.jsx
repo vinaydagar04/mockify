@@ -1,5 +1,6 @@
 import { CodeDemo } from "@/components/demo-components-animate-code";
 import { StarsBackgroundDemo } from "@/components/demo-components-backgrounds-stars";
+import PricingSection from "@/components/PricingSection";
 import {
   GoldTitle,
   GrayTitle,
@@ -9,6 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AI_TAGS, AVATARS, LOGOS, ROLES, SLOTS } from "@/lib/data";
+import { PricingTable } from "@clerk/nextjs";
 import { Bot, Wallet } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -297,6 +299,21 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+      {/* PRICING */}
+      <section className="relative z-10 pb-28 max-w-5xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <SectionLabel>Pricing</SectionLabel>
+          <SectionHeading
+            gray="Simple, transparent"
+            gold="credit-based plans"
+          />
+          <p className="text-stone-400 mt-3 text-sm">
+            Each credit = one session. Unused credits roll over.
+          </p>
+        </div>
+
+        <PricingSection />
       </section>
     </div>
   );
