@@ -10,12 +10,12 @@ const isProtectedRoute = createRouteMatcher([
 
 export default clerkMiddleware(async (auth, req) => {
   // Skip Arcjet for trusted webhook routes
-  if (!isWebhookRoute(req)) {
-    const decision = await aj.protect(req);
-    if (decision.isDenied()) {
-      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-    }
-  }
+  // if (!isWebhookRoute(req)) {
+  //   const decision = await aj.protect(req);
+  //   if (decision.isDenied()) {
+  //     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  //   }
+  // }
 
   const { userId } = await auth();
 
