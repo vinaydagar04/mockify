@@ -313,7 +313,17 @@ export default function Home() {
           </p>
         </div>
 
-        <PricingSection />
+        <PricingSection
+          checkoutProps={{
+            appearance: {
+              elements: {
+                drawerRoot: {
+                  zIndex: 2000,
+                },
+              },
+            },
+          }}
+        />
       </section>
 
       {/* CTA */}
