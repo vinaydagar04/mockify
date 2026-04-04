@@ -4,6 +4,7 @@ import { checkUser } from "@/lib/checkUser";
 import Link from "next/link";
 import HeaderAction from "./HeaderAction";
 import Image from "next/image";
+import RoleRedirect from "./RoleRedirect";
 
 const Header = async () => {
   const user = await checkUser();
@@ -19,6 +20,9 @@ const Header = async () => {
           className="h-11 w-auto"
         />
       </Link>
+
+      {/* RoleRedirect logic */}
+      {user && <RoleRedirect />}
 
       <HeaderAction user={user} />
     </nav>
