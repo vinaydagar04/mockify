@@ -6,7 +6,6 @@ import { StreamClient } from "@stream-io/node-sdk";
 import { revalidatePath } from "next/cache";
 import { request } from "@arcjet/next";
 import { createRateLimiter, checkRateLimit } from "@/lib/arcjet";
-import { StreamClient } from "@stream-io/node-sdk";
 
 // 5 booking attempts per hour — generous enough for real users,
 // tight enough to block automated abuse
