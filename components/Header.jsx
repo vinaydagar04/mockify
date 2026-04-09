@@ -10,14 +10,14 @@ const Header = async () => {
   const user = await checkUser();
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-3 sm:px-10 py-3 border-b border-white/7 backdrop-blur-xl">
+    <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-3 sm:px-10 h-16 border-b border-white/7 backdrop-blur-xl">
       <Link href="/">
         <Image
-          src="/logo(4).png"
-          alt="Prept Logo"
-          width={100}
-          height={100}
-          className="h-11 w-auto"
+          src="/mockify-3.png"
+          alt="Mockify Logo"
+          width={120}
+          height={40}
+          className="object-contain"
         />
       </Link>
 

@@ -20,8 +20,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "Prept",
-  description: "",
+  title: "Mockify",
+  description: "AI Mock Interview Platform",
+  icons: {
+    icon: "/mockify.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
